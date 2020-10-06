@@ -1,0 +1,12 @@
+CC=g++
+target=result
+objects=main.o String.o
+
+$(target):$(objects)
+	$(CC) -o $(target) $(objects)
+
+$(objects): Header.h
+
+.PHONY:clean
+clean:
+	rm $(target) $(objects)
